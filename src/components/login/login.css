@@ -1,0 +1,965 @@
+/* =========================================
+   RESET
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.login-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px 16px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(155, 77, 104, 0.35),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(214, 179, 106, 0.12),
+      transparent 30%
+    ),
+    #2B1720;
+
+  color: #FFF5E8;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.background-glow {
+  position: absolute;
+
+  width: clamp(180px, 30vw, 420px);
+  height: clamp(180px, 30vw, 420px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(80px);
+}
+
+.glow-one {
+  top: -140px;
+  left: -120px;
+
+  background: rgba(155, 77, 104, 0.32);
+
+  animation: glowMoveOne 9s ease-in-out infinite;
+}
+
+.glow-two {
+  right: -140px;
+  bottom: -140px;
+
+  background: rgba(214, 179, 106, 0.1);
+
+  animation: glowMoveTwo 11s ease-in-out infinite;
+}
+
+@keyframes glowMoveOne {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(30px, 25px);
+  }
+}
+
+@keyframes glowMoveTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-30px, -25px);
+  }
+}
+
+
+/* =========================================
+   FLOATING PARTICLES
+========================================= */
+
+.background-particles {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+
+  color: rgba(217, 160, 179, 0.4);
+
+  font-family: Georgia, serif;
+
+  user-select: none;
+}
+
+.particle-one {
+  top: 13%;
+  left: 8%;
+
+  font-size: 22px;
+}
+
+.particle-two {
+  top: 23%;
+  right: 9%;
+
+  font-size: 15px;
+}
+
+.particle-three {
+  bottom: 18%;
+  left: 7%;
+
+  font-size: 17px;
+}
+
+.particle-four {
+  bottom: 10%;
+  right: 8%;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.login-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 470px);
+
+  padding:
+    clamp(28px, 6vw, 50px)
+    clamp(20px, 6vw, 48px)
+    clamp(24px, 5vw, 34px);
+
+  margin: auto;
+
+  text-align: center;
+
+  border: 1px solid rgba(255, 245, 232, 0.13);
+
+  border-radius: clamp(22px, 5vw, 34px);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 245, 232, 0.095),
+      rgba(255, 245, 232, 0.035)
+    );
+
+  backdrop-filter: blur(22px);
+
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 245, 232, 0.07);
+}
+
+
+/* =========================================
+   HEART
+========================================= */
+
+.login-heart {
+  width: clamp(52px, 13vw, 70px);
+  height: clamp(52px, 13vw, 70px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(217, 160, 179, 0.22);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(155, 77, 104, 0.7),
+      rgba(155, 77, 104, 0.18)
+    );
+
+  color: #D9A0B3;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(29px, 8vw, 40px);
+
+  box-shadow:
+    0 0 30px rgba(217, 160, 179, 0.12);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.secret-label {
+  margin: 0 0 7px;
+
+  color: #D9A0B3;
+
+  font-size: clamp(8px, 2vw, 10px);
+
+  letter-spacing: clamp(1.5px, 0.6vw, 3px);
+
+  font-weight: 600;
+}
+
+.login-card h1 {
+  margin: 0;
+
+  font-size: clamp(28px, 7vw, 40px);
+
+  line-height: 1.1;
+
+  font-weight: 500;
+
+  color: #FFF5E8;
+}
+
+.login-subtitle {
+  margin: 4px 0 clamp(14px, 3vw, 20px);
+
+  color: #D9A0B3;
+
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(22px, 5vw, 29px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.decorative-line {
+  width: 60px;
+  height: 1px;
+
+  margin: 0 auto clamp(16px, 4vw, 22px);
+
+  background: #D6B36A;
+
+  opacity: 0.65;
+}
+
+.login-message {
+  margin: 0 0 clamp(22px, 5vw, 30px);
+
+  color: rgba(255, 245, 232, 0.68);
+
+  font-size: clamp(12px, 3.5vw, 14px);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.login-form {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: clamp(18px, 4vw, 24px);
+}
+
+.input-group {
+  width: 100%;
+
+  text-align: left;
+}
+
+.question-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #FFF5E8;
+
+  font-size: clamp(12px, 3.4vw, 14px);
+
+  line-height: 1.4;
+}
+
+.question-label span {
+  color: #D9A0B3;
+}
+
+
+/* =========================================
+   RELATIONSHIP OPTIONS
+========================================= */
+
+.relationship-options {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.relationship-option {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 14px;
+
+  border: 1px solid rgba(217, 160, 179, 0.2);
+
+  border-radius: 14px;
+
+  background: rgba(255, 245, 232, 0.04);
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.relationship-option input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+}
+
+.radio-circle {
+  flex: 0 0 18px;
+
+  width: 18px;
+  height: 18px;
+
+  border: 1.5px solid rgba(255, 245, 232, 0.4);
+
+  border-radius: 50%;
+
+  transition: 0.25s ease;
+}
+
+.relationship-option:hover {
+  border-color: rgba(217, 160, 179, 0.5);
+
+  background: rgba(155, 77, 104, 0.14);
+
+  transform: translateX(2px);
+}
+
+.relationship-option input:checked ~ .radio-circle {
+  border-color: #D6B36A;
+
+  background:
+    radial-gradient(
+      circle,
+      #D6B36A 0 45%,
+      transparent 48%
+    );
+
+  box-shadow:
+    0 0 12px rgba(214, 179, 106, 0.3);
+}
+
+.relationship-option input:checked ~ .option-content {
+  color: #FFF5E8;
+}
+
+.option-content {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 245, 232, 0.72);
+
+  font-size: clamp(13px, 3.5vw, 14px);
+}
+
+.option-icon {
+  font-size: 17px;
+}
+
+
+/* =========================================
+   DATE OPTIONS
+========================================= */
+
+.date-options {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.date-option {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.date-option input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+}
+
+.date-option-content {
+  width: 100%;
+
+  min-height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 10px;
+
+  border: 1px solid rgba(217, 160, 179, 0.2);
+
+  border-radius: 15px;
+
+  background: rgba(255, 245, 232, 0.04);
+
+  color: rgba(255, 245, 232, 0.72);
+
+  transition: 0.25s ease;
+
+  white-space: nowrap;
+}
+
+.date-option:hover .date-option-content {
+  border-color: rgba(217, 160, 179, 0.55);
+
+  background: rgba(155, 77, 104, 0.16);
+
+  transform: translateY(-2px);
+}
+
+.date-option input:checked + .date-option-content {
+  border-color: #D6B36A;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(155, 77, 104, 0.48),
+      rgba(155, 77, 104, 0.2)
+    );
+
+  color: #FFF5E8;
+
+  box-shadow:
+    0 8px 24px rgba(214, 179, 106, 0.18);
+}
+
+.calendar-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 30px;
+
+  border-radius: 50%;
+
+  background: rgba(217, 160, 179, 0.1);
+
+  color: #D9A0B3;
+
+  font-size: 17px;
+}
+
+.date-option-content > span:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: max-content;
+}
+
+.date-option-content small {
+  color: #D6B36A;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+}
+
+.date-option-content strong {
+  margin-top: 2px;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.login-button {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 13px 18px;
+
+  border: 1px solid rgba(214, 179, 106, 0.4);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #D6B36A,
+      #B9944E
+    );
+
+  color: #2B1720;
+
+  font-family: inherit;
+
+  font-size: clamp(13px, 3.5vw, 14px);
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px rgba(214, 179, 106, 0.25);
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.login-button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+.login-button:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.login-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 60%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 245, 232, 0.25),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  animation: buttonShine 4s infinite;
+}
+
+@keyframes buttonShine {
+  0% {
+    left: -100%;
+  }
+
+  25%,
+  100% {
+    left: 150%;
+  }
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.bottom-note {
+  margin:
+    clamp(17px, 4vw, 24px)
+    0
+    0;
+
+  color: rgba(255, 245, 232, 0.3);
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(9px, 2.5vw, 11px);
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   CUSTOM DIALOG
+========================================= */
+
+.dialog-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(20, 10, 15, 0.72);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dialog-box {
+  width: min(100%, 390px);
+
+  padding:
+    clamp(28px, 7vw, 38px)
+    clamp(22px, 6vw, 34px);
+
+  text-align: center;
+
+  border: 1px solid rgba(217, 160, 179, 0.25);
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(58, 32, 43, 0.99),
+      rgba(43, 23, 32, 0.99)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 245, 232, 0.07);
+}
+
+.dialog-heart {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 17px;
+
+  border-radius: 50%;
+
+  background: rgba(155, 77, 104, 0.35);
+
+  color: #D9A0B3;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 0 25px rgba(155, 77, 104, 0.2);
+}
+
+.dialog-box h2 {
+  margin: 0 0 10px;
+
+  color: #FFF5E8;
+
+  font-size: clamp(21px, 6vw, 27px);
+
+  font-weight: 500;
+}
+
+.dialog-box p {
+  margin: 0;
+
+  color: #FFF5E8;
+
+  font-size: clamp(14px, 4vw, 16px);
+
+  line-height: 1.6;
+}
+
+.dialog-small-text {
+  display: block;
+
+  margin-top: 10px;
+
+  color: rgba(255, 245, 232, 0.55);
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(11px, 3vw, 13px);
+
+  font-style: italic;
+
+  line-height: 1.6;
+}
+
+.dialog-button {
+  width: 100%;
+
+  margin-top: 23px;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #D6B36A,
+      #B9944E
+    );
+
+  color: #2B1720;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.dialog-button:hover {
+  background: #E0C17D;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SHORT MOBILE
+========================================= */
+
+@media (max-height: 680px) and (max-width: 600px) {
+
+  .login-page {
+    align-items: flex-start;
+
+    padding:
+      14px
+      12px
+      20px;
+  }
+
+  .login-card {
+    margin-top: 0;
+
+    padding-top: 22px;
+  }
+
+  .login-heart {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 10px;
+
+    font-size: 27px;
+  }
+
+  .login-card h1 {
+    font-size: 27px;
+  }
+
+  .login-subtitle {
+    margin-bottom: 10px;
+  }
+
+  .login-message {
+    margin-bottom: 17px;
+
+    line-height: 1.5;
+  }
+
+  .login-form {
+    gap: 14px;
+  }
+
+  .relationship-option {
+    min-height: 46px;
+
+    padding: 8px 12px;
+  }
+
+  .date-option-content {
+    min-height: 62px;
+  }
+
+  .bottom-note {
+    margin-top: 14px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 600px) {
+
+  .login-page {
+    padding: 40px 24px;
+  }
+
+  .login-card {
+    width: min(100%, 480px);
+  }
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (min-width: 1024px) {
+
+  .login-page {
+    padding: 50px 30px;
+  }
+
+  .login-card {
+    width: min(90vw, 500px);
+  }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1440px) {
+
+  .login-card {
+    width: 510px;
+  }
+}

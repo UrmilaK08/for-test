@@ -1,0 +1,1157 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+.access-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 18px 60px;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(155, 77, 104, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(214, 179, 106, 0.08),
+      transparent 30%
+    ),
+    #21131a;
+
+  color: #fff5e8;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.access-glow {
+  position: fixed;
+
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  opacity: 0.22;
+
+  pointer-events: none;
+}
+
+.access-glow-one {
+  top: -100px;
+  left: -90px;
+
+  background: #9b4d68;
+}
+
+.access-glow-two {
+  right: -100px;
+  bottom: -100px;
+
+  background: #d6b36a;
+}
+
+/* =========================
+   FLOATING PARTICLES
+========================= */
+
+.access-particles {
+  position: fixed;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  color: rgba(214, 179, 106, 0.3);
+}
+
+.access-particles span {
+  position: absolute;
+
+  font-size: 18px;
+
+  animation: floatParticle 6s ease-in-out infinite;
+}
+
+.access-particles span:nth-child(1) {
+  top: 15%;
+  left: 12%;
+}
+
+.access-particles span:nth-child(2) {
+  top: 28%;
+  right: 15%;
+
+  animation-delay: 1s;
+}
+
+.access-particles span:nth-child(3) {
+  top: 65%;
+  left: 8%;
+
+  animation-delay: 2s;
+}
+
+.access-particles span:nth-child(4) {
+  top: 75%;
+  right: 12%;
+
+  animation-delay: 3s;
+}
+
+.access-particles span:nth-child(5) {
+  top: 45%;
+  right: 5%;
+
+  animation-delay: 1.5s;
+}
+
+@keyframes floatParticle {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.7;
+  }
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.access-back-button {
+  position: absolute;
+
+  top: 22px;
+  left: 18px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+
+  color: #d9a0b3;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.access-back-button span {
+  font-size: 20px;
+}
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+.access-top-button {
+  position: fixed;
+
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 10;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(214, 179, 106, 0.35);
+  border-radius: 50%;
+
+  background: #3a202b;
+
+  color: #d6b36a;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.access-card {
+  position: relative;
+
+  width: min(100%, 680px);
+
+  margin: 0 auto;
+
+  padding: 38px 20px 48px;
+
+  border: 1px solid rgba(214, 179, 106, 0.25);
+
+  border-radius: 24px;
+
+  background: rgba(55, 30, 41, 0.94);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  text-align: center;
+}
+
+/* =========================
+   CHAPTER
+========================= */
+
+.access-chapter {
+  margin: 0 0 10px;
+
+  color: #d6b36a;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.access-title {
+  margin: 0;
+
+  color: #fff5e8;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: clamp(42px, 11vw, 64px);
+
+  font-weight: 600;
+
+  line-height: 1.1;
+}
+
+/* =========================
+   HEART
+========================= */
+
+.access-lock {
+  margin-top: 18px;
+
+  color: #e8c878;
+
+  font-size: 42px;
+
+  text-shadow:
+    0 0 25px rgba(214, 179, 106, 0.15);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.access-intro {
+  margin: 28px auto 0;
+
+  max-width: 500px;
+
+  color: #d9a0b3;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.85;
+
+  letter-spacing: 0.1px;
+}
+
+.access-intro p {
+  margin: 0 0 19px;
+}
+
+.access-intro p:last-of-type {
+  margin-bottom: 0;
+}
+
+.intro-opening {
+  color: #f0c6d3;
+
+  font-size: 16px;
+}
+
+.intro-opening span {
+  color: #fff5e8;
+
+  font-weight: 600;
+}
+
+.access-intro p:nth-child(2) span {
+  color: #f3c8d5;
+
+  font-weight: 500;
+}
+
+.intro-april {
+  margin: 26px auto 22px !important;
+
+  color: #d9a0b3;
+
+  font-size: 17px;
+}
+
+.intro-april strong {
+  color: #e8c878;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.highlight-text {
+  color: #fff5e8;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.access-intro em {
+  color: #f0c6d3;
+
+  font-style: normal;
+
+  font-weight: 500;
+}
+
+.ours-text {
+  color: #e8c878 !important;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.intro-final {
+  margin-top: 26px !important;
+
+  color: #fff5e8;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.intro-final span {
+  font-size: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.memory-start-button {
+  margin-top: 34px;
+}
+
+.open-file-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 190px;
+
+  margin-top: 30px;
+
+  padding: 14px 22px;
+
+  border: 1px solid rgba(214, 179, 106, 0.5);
+
+  border-radius: 30px;
+
+  background: #9b4d68;
+
+  color: #fff5e8;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(155, 77, 104, 0.25);
+}
+
+.open-file-button span:last-child {
+  font-size: 18px;
+}
+
+/* =========================
+   MEMORY EXPERIENCE
+========================= */
+
+.memory-experience {
+  margin-top: 35px;
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.memory-loader {
+  min-height: 430px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px 10px;
+
+  text-align: center;
+}
+
+.loader-heart {
+  margin-bottom: 25px;
+
+  color: #e8c878;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 64px;
+
+  text-shadow:
+    0 0 35px rgba(214, 179, 106, 0.2);
+}
+
+.loader-label {
+  margin: 0 0 22px;
+
+  color: #d6b36a;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.loader-text {
+  margin: 0;
+
+  color: #d9a0b3;
+
+  font-size: 13px;
+
+  line-height: 2;
+}
+
+.loader-text span {
+  color: #fff5e8;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 22px;
+}
+
+.loader-progress {
+  width: min(240px, 80%);
+
+  height: 1px;
+
+  margin-top: 35px;
+
+  background: rgba(214, 179, 106, 0.15);
+
+  overflow: hidden;
+}
+
+.loader-progress-bar {
+  height: 100%;
+
+  background: #d6b36a;
+
+  box-shadow:
+    0 0 12px rgba(214, 179, 106, 0.5);
+}
+
+.loader-small {
+  margin: 17px 0 0;
+
+  color: #8f6978;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.memory-timeline {
+  margin-top: 10px;
+
+  text-align: left;
+}
+
+.timeline-heading {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(214, 179, 106, 0.2);
+
+  color: #d6b36a;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.timeline-heading small {
+  color: #9f7c89;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   TIMELINE WRAPPER
+========================= */
+
+.timeline {
+  position: relative;
+
+  margin-top: 38px;
+
+  padding-bottom: 10px;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  bottom: 0;
+
+  left: 20px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #d6b36a 0%,
+      rgba(214, 179, 106, 0.35) 60%,
+      rgba(214, 179, 106, 0.05) 100%
+    );
+}
+
+/* =========================
+   TIMELINE ITEM
+========================= */
+
+.timeline-item {
+  position: relative;
+
+  display: flex;
+
+  gap: 20px;
+
+  margin-bottom: 55px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   TIMELINE DOT
+========================= */
+
+.timeline-dot {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 0 0 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(214, 179, 106, 0.45);
+
+  border-radius: 50%;
+
+  background: #3a202b;
+
+  font-size: 16px;
+
+  box-shadow:
+    0 0 0 6px rgba(33, 19, 26, 0.94),
+    0 0 20px rgba(214, 179, 106, 0.08);
+}
+
+.birthday-dot {
+  border-color: rgba(214, 179, 106, 0.7);
+
+  box-shadow:
+    0 0 0 6px rgba(33, 19, 26, 0.94),
+    0 0 25px rgba(214, 179, 106, 0.18);
+}
+
+.final-timeline-dot {
+  border-color: rgba(214, 179, 106, 0.8);
+
+  box-shadow:
+    0 0 0 6px rgba(33, 19, 26, 0.94),
+    0 0 30px rgba(214, 179, 106, 0.2);
+}
+
+/* =========================
+   TIMELINE CONTENT
+========================= */
+
+.timeline-content {
+  flex: 1;
+
+  padding: 1px 0 10px;
+}
+
+.timeline-date {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #d6b36a;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.timeline-content h3 {
+  margin: 0 0 18px;
+
+  color: #fff5e8;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+.memory-text {
+  margin: 0 0 19px;
+
+  color: #d9a0b3;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+.memory-text em {
+  color: #f0c6d3;
+
+  font-style: normal;
+
+  font-weight: 500;
+}
+
+.memory-highlight {
+  margin: 23px 0;
+
+  color: #fff5e8;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1.85;
+}
+
+.memory-highlight strong {
+  color: #e8c878;
+
+  font-weight: 600;
+}
+
+/* =========================
+   PHOTO CARDS
+========================= */
+
+.memory-photo-card {
+  width: 100%;
+
+  margin: 25px 0 27px;
+
+  padding: 7px;
+
+  border: 1px solid rgba(214, 179, 106, 0.28);
+
+  background: rgba(31, 17, 24, 0.8);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.memory-photo-placeholder {
+  width: 100%;
+
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(155, 77, 104, 0.18),
+      rgba(214, 179, 106, 0.08)
+    );
+
+  color: #9f7c89;
+
+  text-align: center;
+}
+
+.memory-photo-placeholder span {
+  font-size: 32px;
+
+  opacity: 0.6;
+}
+
+.memory-photo-placeholder small {
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+/*
+  When the actual images are added,
+  use:
+
+  <img
+    src="/memories/second-meet-01.jpg"
+    alt="Our second meet"
+    className="memory-photo"
+  />
+*/
+
+.memory-photo {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-height: 520px;
+
+  object-fit: cover;
+}
+
+/* =========================
+   BIRTHDAY PHOTO
+========================= */
+
+.birthday-photo-card {
+  margin-top: 30px;
+
+  padding: 8px;
+
+  border-color: rgba(214, 179, 106, 0.45);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(214, 179, 106, 0.05);
+}
+
+.birthday-photo-placeholder {
+  min-height: 250px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(214, 179, 106, 0.13),
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(155, 77, 104, 0.2),
+      rgba(214, 179, 106, 0.1)
+    );
+}
+
+.birthday-photo-placeholder span {
+  font-size: 48px;
+}
+
+/* =========================
+   TRAVEL MEMORY
+========================= */
+
+.travel-symbol {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin: 30px 0;
+
+  color: #d6b36a;
+
+  font-size: 18px;
+}
+
+.travel-symbol span:nth-child(2) {
+  font-size: 11px;
+
+  opacity: 0.5;
+}
+
+.special-memory-line {
+  margin: 30px 0;
+
+  padding: 15px 10px;
+
+  border-top: 1px solid rgba(214, 179, 106, 0.22);
+
+  border-bottom: 1px solid rgba(214, 179, 106, 0.22);
+
+  color: #e8c878;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+  letter-spacing: 2px;
+
+  text-align: center;
+}
+
+.final-memory-line {
+  color: #f0c6d3;
+}
+
+/* =========================
+   BIRTHDAY MEMORY
+========================= */
+
+.birthday-ending {
+  margin: 32px 0 10px;
+
+  color: #e8c878;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 31px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  text-align: center;
+}
+
+/* =========================
+   TODAY MEMORY
+========================= */
+
+.final-birthday-entry {
+  margin-top: 15px;
+
+  padding-bottom: 10px;
+}
+
+.final-birthday-entry .timeline-content {
+  padding-bottom: 0;
+}
+
+.final-birthday-entry h3 {
+  color: #f0c6d3;
+}
+
+.sorry-text {
+  margin: 30px 0;
+
+  color: #fff5e8;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+.memory-final-bridge {
+  margin: 26px 0 0;
+
+  color: #d9a0b3;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 23px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+.next-page-introduction {
+  margin-top: 35px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(214, 179, 106, 0.18);
+
+  text-align: center;
+}
+
+.next-page-introduction > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #e8c878;
+
+  font-size: 24px;
+}
+
+.next-page-introduction p {
+  margin: 0;
+
+  color: #fff5e8;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 23px;
+
+  line-height: 1.55;
+}
+
+/* =========================
+   TIMELINE ENDING
+========================= */
+
+.timeline-ending {
+  margin-top: 15px;
+
+  padding: 40px 12px 5px;
+
+  text-align: center;
+}
+
+.finished-line {
+  width: 60px;
+
+  height: 1px;
+
+  margin: 0 auto 24px;
+
+  background: #d6b36a;
+}
+
+.finished-heart {
+  margin-bottom: 13px;
+
+  color: #e8c878;
+
+  font-size: 30px;
+}
+
+.timeline-ending h2 {
+  margin: 0 0 20px;
+
+  color: #d6b36a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+  letter-spacing: 3px;
+}
+
+.timeline-ending p {
+  margin: 0 0 18px;
+
+  color: #d9a0b3;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+.timeline-ending .finished-final {
+  color: #fff5e8;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 25px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   CONTINUE BUTTON
+========================= */
+
+.access-continue-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-top: 35px;
+
+  padding: 15px 20px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #9b4d68;
+
+  color: #fff5e8;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(155, 77, 104, 0.25);
+}
+
+.access-continue-button span {
+  font-size: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) {
+  .access-page {
+    padding: 100px 30px 80px;
+  }
+
+  .access-card {
+    padding: 52px 45px 60px;
+  }
+
+  .access-back-button {
+    top: 30px;
+    left: 30px;
+  }
+
+  .memory-timeline {
+    max-width: 560px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .timeline-content h3 {
+    font-size: 31px;
+  }
+
+  .memory-text {
+    font-size: 13px;
+  }
+
+  .memory-highlight {
+    font-size: 14px;
+  }
+
+  .memory-photo-placeholder {
+    min-height: 260px;
+  }
+
+  .birthday-photo-placeholder {
+    min-height: 350px;
+  }
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (min-width: 1100px) {
+  .access-card {
+    width: min(100%, 760px);
+  }
+
+  .memory-timeline {
+    max-width: 600px;
+  }
+}

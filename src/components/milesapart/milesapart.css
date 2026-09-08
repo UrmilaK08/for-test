@@ -1,0 +1,597 @@
+.miles-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px 16px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(155, 77, 104, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(214, 179, 106, 0.1),
+      transparent 35%
+    ),
+    #2b1720;
+
+  color: #fff5e8;
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.miles-glow {
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+.miles-glow-one {
+  top: -100px;
+  left: -80px;
+
+  background: rgba(155, 77, 104, 0.25);
+}
+
+.miles-glow-two {
+  right: -100px;
+  bottom: -100px;
+
+  background: rgba(214, 179, 106, 0.12);
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.miles-card {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 650px);
+
+  padding:
+    clamp(28px, 7vw, 55px)
+    clamp(18px, 5vw, 45px);
+
+  text-align: center;
+
+  border: 1px solid rgba(214, 179, 106, 0.18);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(58, 32, 43, 0.94),
+      rgba(43, 23, 32, 0.96)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 245, 232, 0.04);
+
+  backdrop-filter: blur(16px);
+}
+
+
+/* =========================
+   CHAPTER
+========================= */
+
+.miles-chapter {
+  margin: 0 0 8px;
+
+  color: #d6b36a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.miles-title {
+  margin: 0;
+
+  color: #fff5e8;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(34px, 8vw, 52px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.miles-intro {
+  margin: 22px auto 30px;
+
+  color: #d9a0b3;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(17px, 4vw, 21px);
+
+  line-height: 1.6;
+}
+
+.miles-intro p {
+  margin: 4px 0;
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.journey-map {
+  position: relative;
+
+  width: 100%;
+  height: clamp(280px, 65vw, 360px);
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(214, 179, 106, 0.22);
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(155, 77, 104, 0.16),
+      transparent 55%
+    ),
+    #24151c;
+
+  box-shadow:
+    inset 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   MAP GRID
+========================= */
+
+.map-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.18;
+
+  background-image:
+    linear-gradient(
+      rgba(214, 179, 106, 0.18) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(214, 179, 106, 0.18) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+}
+
+
+/* =========================
+   DECORATIVE LAND
+========================= */
+
+.map-land {
+  position: absolute;
+
+  border: 1px solid rgba(217, 160, 179, 0.08);
+
+  background: rgba(155, 77, 104, 0.07);
+
+  filter: blur(0.2px);
+}
+
+.map-land-one {
+  width: 45%;
+  height: 75%;
+
+  top: -15%;
+  left: 10%;
+
+  border-radius: 45% 55% 40% 60%;
+  transform: rotate(18deg);
+}
+
+.map-land-two {
+  width: 38%;
+  height: 65%;
+
+  right: 4%;
+  bottom: -15%;
+
+  border-radius: 55% 45% 60% 40%;
+  transform: rotate(-12deg);
+}
+
+
+/* =========================
+   LOCATIONS
+========================= */
+
+.location {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 3px;
+
+  color: #d6b36a;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-shadow:
+    0 0 10px rgba(214, 179, 106, 0.35);
+}
+
+.location-pin {
+  font-size: 27px;
+
+  filter:
+    drop-shadow(
+      0 0 8px
+      rgba(155, 77, 104, 0.8)
+    );
+}
+
+.location-thanjavur {
+  left: 12%;
+  top: 22%;
+}
+
+.location-pondicherry {
+  right: 7%;
+  bottom: 22%;
+}
+
+
+/* =========================
+   ROUTE
+========================= */
+
+.journey-route {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 3;
+
+  color: #d9a0b3;
+
+  filter:
+    drop-shadow(
+      0 0 6px
+      rgba(217, 160, 179, 0.7)
+    );
+}
+
+
+/* =========================
+   MOVING HEART
+========================= */
+
+.travelling-heart {
+  position: absolute;
+
+  z-index: 10;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 22px;
+
+  filter:
+    drop-shadow(
+      0 0 8px
+      rgba(214, 179, 106, 0.8)
+    );
+}
+
+
+/* =========================
+   DISTANCE
+========================= */
+
+.distance {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 50%;
+  bottom: 8%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  background: rgba(43, 23, 32, 0.82);
+
+  border:
+    1px solid rgba(214, 179, 106, 0.18);
+
+  backdrop-filter: blur(8px);
+}
+
+.distance strong {
+  color: #d6b36a;
+
+  font-size: 17px;
+
+  letter-spacing: 1px;
+}
+
+.distance span {
+  margin-top: 2px;
+
+  color: #d9a0b3;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.miles-story {
+  margin-top: 32px;
+}
+
+.story-main {
+  margin: 0;
+
+  color: #fff5e8;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(21px, 5vw, 28px);
+
+  line-height: 1.4;
+}
+
+.story-description {
+  max-width: 500px;
+
+  margin:
+    12px auto 0;
+
+  color: #d9a0b3;
+
+  font-size: clamp(15px, 3.5vw, 18px);
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CHOLAN MESSAGE
+========================= */
+
+.cholan-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 24px;
+
+  padding: 14px 16px;
+
+  border-radius: 16px;
+
+  background: rgba(155, 77, 104, 0.1);
+
+  border:
+    1px solid rgba(155, 77, 104, 0.2);
+}
+
+.train {
+  font-size: 22px;
+
+  animation: trainBounce 1.4s ease-in-out infinite;
+}
+
+.cholan-message p {
+  margin: 0;
+
+  color: #d6b36a;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(14px, 3.5vw, 17px);
+
+  line-height: 1.5;
+}
+
+@keyframes trainBounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.miles-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 30px;
+
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 50px;
+
+  color: #2b1720;
+
+  background: #d6b36a;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(214, 179, 106, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.miles-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(214, 179, 106, 0.25);
+}
+
+.miles-button span {
+  font-size: 18px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .miles-page {
+    padding: 14px 10px;
+  }
+
+  .miles-card {
+    padding: 28px 15px;
+    border-radius: 22px;
+  }
+
+  .miles-intro {
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+
+  .journey-map {
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  .location-thanjavur {
+    left: 8%;
+    top: 20%;
+  }
+
+  .location-pondicherry {
+    right: 5%;
+    bottom: 20%;
+  }
+
+  .location {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .location-pin {
+    font-size: 24px;
+  }
+
+  .story-description {
+    line-height: 1.6;
+  }
+
+  .cholan-message {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .miles-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================
+   TABLET / DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+  .miles-page {
+    padding: 40px;
+  }
+
+  .miles-card {
+    padding: 55px;
+  }
+
+  .journey-map {
+    height: 360px;
+  }
+}

@@ -1,0 +1,541 @@
+.story-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 20px 12px 50px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(155, 77, 104, 0.22),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(214, 179, 106, 0.1),
+      transparent 35%
+    ),
+    #2b1720;
+  color: #fff5e8;
+}
+
+.story-glow {
+  position: fixed;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.story-glow-one {
+  top: -90px;
+  left: -100px;
+  background: rgba(155, 77, 104, 0.22);
+}
+
+.story-glow-two {
+  right: -100px;
+  bottom: -100px;
+  background: rgba(214, 179, 106, 0.1);
+}
+
+.story-card {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 700px);
+  margin: 0 auto;
+  padding: 35px 18px 45px;
+  border: 1px solid rgba(214, 179, 106, 0.16);
+  border-radius: 26px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(58, 32, 43, 0.96),
+      rgba(43, 23, 32, 0.98)
+    );
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 245, 232, 0.04);
+  backdrop-filter: blur(14px);
+}
+
+.story-chapter {
+  margin: 0 0 8px;
+  color: #d6b36a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.story-title {
+  margin: 0;
+  color: #fff5e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 8vw, 50px);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.story-heart {
+  margin: 15px auto 0;
+  color: #d6b36a;
+  font-size: 25px;
+  text-align: center;
+}
+
+.letter {
+  margin-top: 38px;
+}
+
+.letter-section {
+  max-width: 590px;
+  margin: 0 auto;
+  padding: 28px 0;
+  color: #ead8d1;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(16px, 3.8vw, 19px);
+  line-height: 1.85;
+  text-align: left;
+}
+
+.letter-section + .letter-section {
+  border-top: 1px solid rgba(214, 179, 106, 0.08);
+}
+
+.letter-section p {
+  margin: 0 0 20px;
+}
+
+.letter-section p:last-child {
+  margin-bottom: 0;
+}
+
+.letter-greeting {
+  color: #fff5e8;
+  font-size: clamp(22px, 5vw, 28px);
+  font-style: italic;
+}
+
+.emphasis {
+  color: #fff5e8;
+  font-size: 1.05em;
+}
+
+.funny-section {
+  text-align: center;
+}
+
+.little-note {
+  margin: 15px auto;
+  padding: 15px 18px;
+  border-left: 2px solid #d6b36a;
+  border-radius: 0 12px 12px 0;
+  background: rgba(155, 77, 104, 0.08);
+  text-align: left;
+}
+
+.little-note p {
+  margin: 0 0 4px;
+  color: #d9a0b3;
+}
+
+.little-note strong {
+  color: #fff5e8;
+  font-size: 18px;
+}
+
+.center-line {
+  margin-top: 28px !important;
+  text-align: center;
+  color: #d9a0b3;
+}
+
+.center-line span {
+  color: #fff5e8;
+  font-size: 1.15em;
+}
+
+.two-years {
+  text-align: center;
+}
+
+.short-lines {
+  margin-top: 25px;
+}
+
+.short-lines p {
+  margin: 9px 0;
+  color: #d9a0b3;
+}
+
+.pondy-section {
+  text-align: center;
+}
+
+.quote {
+  margin: 25px auto 8px;
+  color: #d6b36a;
+  font-size: clamp(25px, 6vw, 35px);
+  font-style: italic;
+}
+
+.small-funny {
+  color: #d9a0b3;
+  font-size: 15px;
+}
+
+.never-came {
+  margin-top: 30px !important;
+  color: #fff5e8;
+  font-size: 1.1em;
+}
+
+.turning-point {
+  padding-top: 45px;
+  text-align: center;
+}
+
+.turning-label {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #d6b36a;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.funny-highlight {
+  color: #d6b36a;
+  font-size: 1.15em;
+}
+
+.april-section {
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.date-label {
+  margin-bottom: 15px !important;
+  color: #d6b36a;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.april-section h2 {
+  margin: 0 0 15px;
+  color: #fff5e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.yes-word {
+  margin: 5px 0 10px;
+  color: #d6b36a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 14vw, 75px);
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.april-five {
+  margin-top: 25px !important;
+  color: #fff5e8;
+  font-size: 1.2em;
+}
+
+.grateful {
+  color: #fff5e8;
+  font-size: 1.05em;
+  text-align: center;
+}
+
+.suspicion-section {
+  text-align: center;
+}
+
+.suspicion-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 25px 0;
+  padding: 18px;
+  border: 1px solid rgba(214, 179, 106, 0.14);
+  border-radius: 16px;
+  background: rgba(214, 179, 106, 0.05);
+  text-align: left;
+}
+
+.suspicion-note span {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.suspicion-note p {
+  margin: 0;
+  color: #d9a0b3;
+  font-style: italic;
+}
+
+.proposal-section {
+  text-align: center;
+}
+
+.decision {
+  margin: 28px auto;
+  padding: 22px 15px;
+  border-radius: 18px;
+  background: rgba(155, 77, 104, 0.1);
+}
+
+.decision span {
+  display: block;
+  color: #d9a0b3;
+  font-size: 15px;
+}
+
+.decision strong {
+  display: block;
+  margin-top: 8px;
+  color: #fff5e8;
+  font-size: clamp(21px, 5vw, 28px);
+}
+
+.say-yes-section {
+  text-align: center;
+}
+
+.no-doubts {
+  margin: 25px 0;
+}
+
+.no-doubts p {
+  margin: 5px 0;
+  color: #d9a0b3;
+}
+
+.say-yes {
+  margin: 25px 0 15px;
+  color: #d6b36a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 7vw, 42px);
+  font-style: italic;
+}
+
+.yes-heart {
+  color: #fff5e8;
+  font-size: 20px;
+}
+
+.funny-ending {
+  text-align: center;
+}
+
+.heart-ignored {
+  margin-top: 25px !important;
+  color: #d6b36a;
+  font-size: 1.08em;
+}
+
+.trust-section {
+  text-align: center;
+}
+
+.trust-lines {
+  margin: 25px 0;
+}
+
+.trust-lines p {
+  margin: 8px 0;
+  color: #d9a0b3;
+}
+
+.no-proof {
+  color: #fff5e8;
+  font-size: 1.08em;
+}
+
+.always-section {
+  text-align: center;
+}
+
+.believe {
+  margin: 30px 0;
+  color: #d6b36a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 7vw, 43px);
+  font-style: italic;
+}
+
+.always {
+  margin: 25px 0;
+}
+
+.always span {
+  display: block;
+  margin: 5px 0;
+  color: #d9a0b3;
+}
+
+.always-big {
+  margin-top: 30px;
+  color: #fff5e8;
+  font-size: clamp(21px, 5vw, 29px);
+  line-height: 1.5;
+}
+
+.maybe-list {
+  margin: 25px 0;
+  padding-left: 15px;
+  border-left: 2px solid rgba(214, 179, 106, 0.4);
+}
+
+.maybe-list p {
+  margin: 10px 0;
+  color: #d9a0b3;
+}
+
+.final-section {
+  padding-top: 45px;
+  text-align: center;
+}
+
+.final-story {
+  margin: 30px 0;
+}
+
+.final-story p {
+  margin: 12px 0;
+  color: #d9a0b3;
+}
+
+.final-yes {
+  margin: 35px 0;
+  color: #d6b36a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 7vw, 43px);
+  font-style: italic;
+}
+
+.final-line {
+  margin-top: 35px;
+  color: #fff5e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 5vw, 28px);
+  line-height: 1.5;
+}
+
+.final-heart {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.story-continue {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.continue-line {
+  width: 70px;
+  height: 1px;
+  margin: 0 auto 22px;
+  background: rgba(214, 179, 106, 0.35);
+}
+
+.story-continue p {
+  margin: 0;
+  color: #d9a0b3;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.story-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: min(100%, 280px);
+  margin-top: 25px;
+  padding: 15px 22px;
+  border: none;
+  border-radius: 50px;
+  color: #2b1720;
+  background: #d6b36a;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    0 10px 25px rgba(214, 179, 106, 0.18);
+}
+
+.story-button span {
+  font-size: 18px;
+}
+
+
+.story-button:hover {
+  transform: translateY(-2px);
+}
+
+
+
+@media (max-width: 480px) {
+  .story-page {
+    padding: 12px 9px 40px;
+  }
+
+  .story-card {
+    padding: 30px 15px 38px;
+    border-radius: 22px;
+  }
+
+  .letter {
+    margin-top: 28px;
+  }
+
+  .letter-section {
+    padding: 25px 2px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .little-note {
+    padding: 14px;
+  }
+
+  .suspicion-note {
+    padding: 15px;
+  }
+
+  .story-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .story-page {
+    padding: 45px 25px 70px;
+  }
+
+  .story-card {
+    padding: 55px 55px 60px;
+  }
+
+  .letter {
+    margin-top: 45px;
+  }
+
+  .letter-section {
+    padding: 40px 0;
+  }
+}
